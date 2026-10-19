@@ -1,0 +1,77 @@
+/* La direction artistique du jeu, portée sur le web. Les essences sont relevées
+   sur la piste, pas choisies : bleu de nuit #12141C (le fond de l'app, du boot
+   splash et du storyboard iOS), rouge du pont #E04B3C, bleu de la foule #3B7BE0,
+   jaune du marquage #FFC93C, acier sombre #2A3242 pour le secondaire.
+
+   Les quatre règles de `grimoire.gd` valent ici aussi : le décor est derrière et
+   jamais dedans ; un contour quasi-noir épais sur tout ce qui est posé dessus ;
+   une extrusion pleine vers le bas, sans flou ; le cyan est rare. */
+:root { color-scheme: dark; }
+
+body {
+  margin: 0;
+  padding: 3rem 1.25rem 6rem;
+  background: #12141C;
+  color: #E8ECF4;
+  font: 17px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+
+main { max-width: 42rem; margin: 0 auto; }
+
+.tag {
+  color: #FFC93C;
+  letter-spacing: .22em;
+  font-size: .75rem;
+  font-weight: 700;
+  margin: 0 0 .4rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+  line-height: 1.1;
+  margin: 0 0 .6rem;
+  font-weight: 800;
+  letter-spacing: -.01em;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin: 2.8rem 0 .6rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+p { margin: 0 0 1rem; }
+a { color: #7FB2FF; }
+strong { font-weight: 700; color: #FFFFFF; }
+
+.lede { font-size: 1.1rem; color: #B9C2D4; }
+.date { color: #8A93A6; font-size: .9rem; margin-bottom: 2rem; }
+
+/* Le bloc du langage de formes du jeu : contour d'encre épais et face inférieure
+   pleine extrudée vers le bas — jamais d'ombre portée floue. C'est cette face
+   qui fait qu'un bloc se lit comme un objet posé, et c'est exactement ce que
+   `chunky_button.gd` fait dans l'app. */
+.plate {
+  background: #2A3242;
+  border: 2px solid #05070C;
+  border-radius: 14px;
+  box-shadow: 0 6px 0 #05070C;
+  padding: 1.1rem 1.3rem;
+  margin: 1.6rem 0 2.2rem;
+}
+.plate p:last-child { margin-bottom: 0; }
+
+/* La plaque rouge : réservée à ce qui fauche. Ici, le seul bloc qui dise « oui,
+   il y a de la publicité et elle vous suit ». Le lecteur ne doit pas avoir à le
+   chercher dans un paragraphe. */
+.plate.warn { background: #3A1F22; border-color: #05070C; box-shadow: 0 6px 0 #05070C; }
+
+hr { border: 0; border-top: 2px solid #2A3242; margin: 3.5rem 0; }
+
+table { border-collapse: collapse; width: 100%; margin: 1.2rem 0 2rem; font-size: .95rem; }
+th, td { text-align: left; padding: .55rem .7rem; border-bottom: 1px solid #2A3242; vertical-align: top; }
+th { color: #FFC93C; font-weight: 700; }
+
+.switch { font-size: .9rem; letter-spacing: .1em; text-transform: uppercase; }
+footer { margin-top: 4rem; color: #8A93A6; font-size: .85rem; }
